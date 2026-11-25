@@ -1,0 +1,68 @@
+# ============================================================
+# Secretos y credenciales (nunca al repositorio)
+# ============================================================
+.env*
+!.env.example
+.env.prod.reference
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+*.secret
+*.secrets
+secrets/
+credentials*.json
+service-account*.json
+.npmrc
+.netrc
+
+# Contexto local de Neon y Vercel (ids de proyecto, tokens)
+.neon
+.vercel
+.neon-local/
+
+# ============================================================
+# Dependencias y build
+# ============================================================
+node_modules/
+.pnpm-store/
+.next/
+out/
+build/
+dist/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# ============================================================
+# Pruebas e2e
+# ============================================================
+test-results/
+playwright-report/
+blob-report/
+
+# ============================================================
+# Sistema y editores
+# ============================================================
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# ============================================================
+# Documentación (convención de Alexander, 2026-10-19)
+# ============================================================
+# Solo se versiona el README. CLAUDE.md, specs, planes y notas viven en el equipo,
+# para que no lleguen al repositorio .md que no hacen falta para el código.
+# Si un .md es necesario para que el sistema funcione, agrégale su propia excepción.
+*.md
+!README.md
+!public/minijuegos/**/CREDITOS.md
+
+# Borrador del perfil: se copia al repositorio del perfil
+/perfil-github/

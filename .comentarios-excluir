@@ -1,0 +1,5 @@
+.env.example
+.gitignore
+drizzle/*.sql
+next-env.d.ts
+public/minijuegos/**

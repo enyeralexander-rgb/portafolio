@@ -1,0 +1,162 @@
+{
+  "id": "37d97927-77f6-4d63-9a51-94cf2dd133f9",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.mensajes": {
+      "name": "mensajes",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "actualizado_en": {
+          "name": "actualizado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "envio_id": {
+          "name": "envio_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "correo": {
+          "name": "correo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "estado_visitante": {
+          "name": "estado_visitante",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mensaje": {
+          "name": "mensaje",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ip_huella": {
+          "name": "ip_huella",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "estado_envio": {
+          "name": "estado_envio",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'pendiente'"
+        },
+        "error_resumen": {
+          "name": "error_resumen",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "mensajes_huella_fecha_idx": {
+          "name": "mensajes_huella_fecha_idx",
+          "columns": [
+            {
+              "expression": "ip_huella",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "creado_en",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "mensajes_fecha_idx": {
+          "name": "mensajes_fecha_idx",
+          "columns": [
+            {
+              "expression": "creado_en",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "mensajes_envio_id_unique": {
+          "name": "mensajes_envio_id_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "envio_id"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "mensajes_correo_largo": {
+          "name": "mensajes_correo_largo",
+          "value": "char_length(\"mensajes\".\"correo\") between 6 and 254"
+        },
+        "mensajes_mensaje_largo": {
+          "name": "mensajes_mensaje_largo",
+          "value": "char_length(\"mensajes\".\"mensaje\") between 2 and 1000"
+        },
+        "mensajes_estado_visitante": {
+          "name": "mensajes_estado_visitante",
+          "value": "\"mensajes\".\"estado_visitante\" is null or \"mensajes\".\"estado_visitante\" in ('disponible', 'ocupado', 'ausente')"
+        },
+        "mensajes_estado_envio": {
+          "name": "mensajes_estado_envio",
+          "value": "\"mensajes\".\"estado_envio\" in ('pendiente', 'enviado', 'fallido')"
+        },
+        "mensajes_error_largo": {
+          "name": "mensajes_error_largo",
+          "value": "\"mensajes\".\"error_resumen\" is null or char_length(\"mensajes\".\"error_resumen\") <= 200"
+        }
+      },
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

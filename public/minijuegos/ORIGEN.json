@@ -1,0 +1,74 @@
+{
+  "memoria-celestial": {
+    "repositorio": "RULETAS PARA PANTALLAS",
+    "ruta": "apps/memoria-celestial/dist-apk",
+    "commit": "1929d7d357f8ec0dd8b6fa05536f1db5c0270c42",
+    "generado": "pnpm --filter @minijuegos/memoria-celestial build:apk",
+    "bytes": 565957,
+    "icono": {
+      "ruta": "apps/memoria-celestial-android/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "ultimoCambio": "1929d7d357f8ec0dd8b6fa05536f1db5c0270c42",
+      "bytes": 44410
+    }
+  },
+  "ruleta-celestial": {
+    "repositorio": "RULETAS PARA PANTALLAS",
+    "ruta": "apps/ruleta-celestial/dist-apk",
+    "commit": "1929d7d357f8ec0dd8b6fa05536f1db5c0270c42",
+    "generado": "pnpm --filter @minijuegos/ruleta-celestial build:apk",
+    "bytes": 646020,
+    "icono": {
+      "ruta": "apps/ruleta-celestial-android/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "ultimoCambio": "1929d7d357f8ec0dd8b6fa05536f1db5c0270c42",
+      "bytes": 62164
+    }
+  },
+  "memoria-changan": {
+    "repositorio": "RULETAS PARA PANTALLAS",
+    "ruta": "apps/memoria-changan/dist-apk",
+    "commit": "1929d7d357f8ec0dd8b6fa05536f1db5c0270c42",
+    "generado": "pnpm --filter @minijuegos/memoria-changan build:apk",
+    "bytes": 2408358,
+    "icono": {
+      "ruta": "apps/memoria-android/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "ultimoCambio": "1929d7d357f8ec0dd8b6fa05536f1db5c0270c42",
+      "bytes": 23520
+    }
+  },
+  "sopa-baby-finger": {
+    "repositorio": "MINIJUEGOS",
+    "ruta": "docs/maquetas/sopa-de-letras/sopa-de-letras-compartible.html",
+    "commit": "8737f7d558e454767a56dd609d8db8772701fe4f",
+    "ultimoCambio": "89e8df2c7f8d6e99ffbdef30e999285a474dc67c",
+    "bytes": 3757435,
+    "icono": {
+      "ruta": "marcas/baby-finger/src/main/res/mipmap-xxxhdpi/icono.png",
+      "ultimoCambio": "ce68ef238d47a3b14898163da1d8ce51ad406733",
+      "bytes": 27361
+    }
+  },
+  "memoria-baby-finger": {
+    "repositorio": "MINIJUEGOS",
+    "ruta": "docs/maquetas/memoria/memoria-compartible.html",
+    "commit": "8737f7d558e454767a56dd609d8db8772701fe4f",
+    "ultimoCambio": "89e8df2c7f8d6e99ffbdef30e999285a474dc67c",
+    "bytes": 5544363,
+    "icono": {
+      "ruta": "marcas/baby-finger/src/main/res/mipmap-xxxhdpi/icono.png",
+      "ultimoCambio": "ce68ef238d47a3b14898163da1d8ce51ad406733",
+      "bytes": 27361
+    }
+  },
+  "rompecabezas-baby-finger": {
+    "repositorio": "MINIJUEGOS",
+    "ruta": "docs/maquetas/rompecabezas/rompecabezas-compartible.html",
+    "commit": "8737f7d558e454767a56dd609d8db8772701fe4f",
+    "ultimoCambio": "89e8df2c7f8d6e99ffbdef30e999285a474dc67c",
+    "bytes": 5318346,
+    "icono": {
+      "ruta": "marcas/baby-finger/src/main/res/mipmap-xxxhdpi/icono.png",
+      "ultimoCambio": "ce68ef238d47a3b14898163da1d8ce51ad406733",
+      "bytes": 27361
+    }
+  }
+}
